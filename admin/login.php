@@ -5,6 +5,7 @@
 
 		$username = $_POST['username'];
 		$password = $_POST['password'];
+        $password = sha1($password);
 
 			try{
 				$stmt = $conn->prepare("SELECT * FROM user WHERE username=:username OR email=:username");
@@ -80,7 +81,7 @@
                                 </div>
                                 <div class="card-footer">
                                     <input type="submit" id="login" name="login" class="btn btn-info btn-lg btn-block" value="Login">
-                                    <a href="register.php" class="btn btn-success btn-lg btn-block" type="submit">Signup</a>
+                                    <!-- <a href="register.php" class="btn btn-success btn-lg btn-block" type="submit">Signup</a> -->
                                 </div>
                             </form>
                         </div>

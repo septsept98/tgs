@@ -111,7 +111,9 @@
       }elseif($hal=='kontak'){
         include "hal/kontak.php";
       }elseif($hal=='search'){
-        include "hal/search.php";
+        include "search.php";
+      }elseif($hal=='detail'){
+        include "hal/detail.php";
       }else{
         include "slide.php"; include"konten.php";
       }

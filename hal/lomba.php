@@ -6,7 +6,7 @@
 
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="index.html">Home</a>
+          <a href="index.php">Home</a>
         </li>
         <li class="breadcrumb-item">
           <a href="">Kegiatan</a>
@@ -20,7 +20,7 @@
           $sql->execute();
           for($i=0;$row=$sql->fetch();$i++){
         ?>
-        <div class="col-lg-6 portfolio-item">
+        <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
             <a href="#"><img class="card-img-top" src="admin/images/<?php echo $row['img_keg']; ?>" alt=""></a>
             <div class="card-body">
@@ -35,7 +35,7 @@
                   echo $row['ket_keg'];
                 } ?> 
               </p>
-              <a href="#" class="btn btn-primary">Read More &rarr;</a>
+              <a href="<?php echo 'index.php?hal=detail&&judul='.$row['judul_keg']; ?>" class="btn btn-primary">Read More &rarr;</a>
             </div>
           </div>
         </div>

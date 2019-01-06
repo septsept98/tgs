@@ -35,13 +35,13 @@
                                         <th scope="col">Nama Lengkap</th>
                                         <th scope="col">Email</th>
                                         <th scope="col">Pesan</th>
-                                        <th width="156px">Aksi</th>
+                                        <th width="160px">Aksi</th>
                                     </tr>
                                     </thead>
                                     <?php
                                         require_once('../koneksi_pdo.php');
                                         $no = 1;
-                                        $data = $conn->prepare("SELECT * FROM buku_tamu");
+                                        $data = $conn->prepare("SELECT * FROM buku_tamu ORDER BY id DESC");
                                         $data->execute();
                                         for($i=0;$row = $data->fetch(); $i++){
                                             $id=$row['id'];

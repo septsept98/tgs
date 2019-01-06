@@ -26,6 +26,7 @@
 		$username = $_POST['username'];
 		$email = $_POST['email'];
 		$password = $_POST['password'];
+		$password = sha1($password);
 		$nm_user = $_POST['nm_user'];
 
 			move_uploaded_file($_FILES["img_user"]["tmp_name"], "../images/avatar/".$_FILES["img_user"]["name"]);

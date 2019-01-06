@@ -4,7 +4,7 @@
 
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="index.html">Home</a>
+          <a href="index.php">Home</a>
         </li>
         <li class="breadcrumb-item active">Informasi</li>
       </ol>
@@ -31,7 +31,7 @@
                   echo $row['ket_berita'];
                 } ?> 
               </p>
-              <a href="#" class="btn btn-primary">Learn More</a>
+              <a href="<?php echo 'index.php?hal=detail&&judul='.$row['judul_berita']; ?>" class="btn btn-primary">Learn More</a>
             </div>
             <div class="card-footer">
               Posted on <?php echo $row['tgl_berita']; ?> by

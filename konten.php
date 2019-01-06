@@ -8,20 +8,17 @@
     $conn->exec($data);
     echo "<script>alert('Berhasil Input Pesan!!');</script>";
   }
-  if(isset($_GET['search'])){
-    
-  }
 ?>
     <!-- Page Content -->
     <div class="container">
-        <form action="" method="get">
+     <form action="search.php" method="get">
       <div class="input-group my-4">
-          <input type="text" class="form-control" name="search" placeholder="Search for...">
+          <input type="text" class="form-control" name="keyword" placeholder="Search for...">
           <span class="input-group-btn">
-            <button class="btn btn-search" type="submit"><i class="fa fa-search fa-fw"></i> Search</button>
+            <button class="btn btn-search" type="submit"><i class="fa fa-search fa-fw"></i> Search</button></a>
           </span>
       </div>
-        </form>
+     </form>
 
     </div>
     <div class="container">
@@ -47,7 +44,7 @@
               </p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Learn More</a>
+              <a href="<?php echo 'index.php?hal=detail&&judul='.$row['judul_kaj']; ?>" class="btn btn-primary">Learn More</a>
             </div>
           </div>
         </div>
@@ -84,6 +81,22 @@
           </form>
         </div>
       </center>
+      <?php
+        $sql = $conn->prepare("SELECT * FROM buku_tamu ORDER BY id DESC LIMIT 3");
+        $sql->execute();
+        for($i=0; $tampil = $sql->fetch(); $i++){
+      ?>
+          <hr>
+          <div class="media mb-4">
+            <div class="media-body">
+              <h6 class="mt-0"><b><?php echo $tampil['fullname']; ?></b></h6>
+              <h6 class="mt-0"><i><?php echo $tampil['email']; ?></i></h6>
+              <?php echo $tampil['message']; ?>
+            </div>
+          </div>
+      <?php }?>
+
+
           </div>
         </div>
       </div>

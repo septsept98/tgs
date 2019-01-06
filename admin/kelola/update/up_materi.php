@@ -26,16 +26,6 @@
                                         <div class="col-12 col-md-9"><input type="text" id="judul_materi" name="judul_materi" value="<?php echo $row['judul_materi']; ?>" class="form-control"></div>
                                     </div>
                                     <div class="row form-group">
-                                        <div class="col col-md-3"><label for="kategori" class=" form-control-label">Kategori</label></div>
-                                        <div class="col-12 col-md-9">
-                                            <select name="kategori" id="kategori" class="form-control">
-                                                <option <?php if($row['kategori']=='Workshop'){echo "selected";} ?> value="Workshop">Workshop</option>
-                                                <option <?php if($row['kategori']=='Klinik'){echo "selected";} ?> value="Klinik">Klinik</option>
-                                                <option <?php if($row['kategori']=='Lomba'){echo "selected";} ?> value="Lomba">Lomba</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row form-group">
                                         <div class="col col-md-3"><label for="tanggal-input" class=" form-control-label">Tanggal Materi</label></div>
                                         <div class="col-12 col-md-9"><input type="date" id="tgl_materi" name="tgl_materi" value="<?php echo $row['tgl_materi']; ?>" class="form-control"></div>
                                     </div>

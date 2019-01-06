@@ -57,7 +57,7 @@
                                     <?php
                                         require_once('../koneksi_pdo.php');
                                         $no = 1;
-                                        $data = $conn->prepare("SELECT * FROM daftardl ORDER BY judul_dl ASC");
+                                        $data = $conn->prepare("SELECT * FROM daftardl");
                                         $data->execute();
                                         for($i=0;$row = $data->fetch(); $i++){
                                             $id=$row['id_dl'];
