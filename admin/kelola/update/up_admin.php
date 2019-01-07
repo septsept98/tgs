@@ -35,7 +35,7 @@
                                     </div>
                                     <div class="row form-group">
                                         <div class="col col-md-3"><label class=" form-control-label">Password</label></div>
-                                        <div class="col-12 col-md-9"><input type="password" id="password" name="password" value="<?php echo $row['password']; ?>" class="form-control"></div>
+                                        <div class="col-12 col-md-9"><input type="password" id="password" name="password" value="" class="form-control" required></div>
                                     </div>
                                     <div class="row form-group">
                                         <div class="col col-md-3"><label class=" form-control-label">Input Gambar</label></div>
